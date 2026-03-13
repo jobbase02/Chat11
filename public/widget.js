@@ -7,7 +7,7 @@
     return;
   }
 
-  const API_BASE = 'http://localhost:3000/api'; 
+  const API_BASE = 'https://chat11.cdn.elevenxsolutions.com/api'; 
   let chatConfig = null;
   let isChatOpen = false;
   let chatHistory = [];
