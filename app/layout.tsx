@@ -15,10 +15,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "chat11 - Copy-paste AI for your website",
   description: "chat11 ingests your FAQs, docs, and website content. In seconds, it generates a custom AI widget you can embed anywhere with one line of code.",
-  
+
   // Ye browser tab ke favicon ke liye hai
   icons: {
-    icon: "/icon.png", 
+    icon: "/icon.png",
     shortcut: "/icon.png",
     apple: "/icon.png",
   },
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     card: "summary", // 'summary' square logo ke liye best hai. Badi image ke liye 'summary_large_image' use karte hain.
     title: "chat11 | Copy-paste AI for your website",
     description: "Your website needs an AI. We made it copy-paste simple.",
-    images: ["/icon.png"], 
+    images: ["/icon.png"],
   },
 };
 
@@ -61,6 +61,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+
+        <script
+          src="https://chat11.cdn.elevenxsolutions.com/widget.js"
+          data-bot-id="c11_5ff751b9ac9f2d0a"
+          async>
+        </script>
       </body>
     </html>
   );

@@ -12,9 +12,10 @@ export async function GET() {
       return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
+    // 🔥 Added bot_header_text_color and suggested_questions to the select query
     const { data: user, error } = await supabase
       .from('user_bots')
-      .select('bot_name, business_name, business_details, theme_color, status, bot_api_key, key_requested')
+      .select('bot_name, business_name, business_details, theme_color, status, bot_api_key, key_requested, widget_bg_color, widget_icon_color, bot_header_color, bot_bubble_color, widget_icon_name, bot_avatar_name, bot_header_text_color, suggested_questions')
       .eq('email', decodeURIComponent(email))
       .single();
 
@@ -40,7 +41,7 @@ export async function POST(req: Request) {
 
     const body = await req.json();
 
-    // 🔥 IF ACTION IS "REQUEST_KEY", SET key_requested TO TRUE
+    // 🔥 IF ACTION IS "REQUEST_KEY", SET key_requested TO TRUE (Untouched)
     if (body.action === 'REQUEST_KEY') {
       const { error } = await supabase
         .from('user_bots')
@@ -54,14 +55,35 @@ export async function POST(req: Request) {
       return NextResponse.json({ success: true, message: 'Key requested successfully' });
     }
 
-    // NORMAL SAVE: Update Bot Details
-    const { bot_name, business_details, theme_color } = body;
+    // NORMAL SAVE: Update Bot Details with NEW CUSTOMIZATION FIELDS
+    const { 
+      bot_name, 
+      business_details, 
+      theme_color,
+      widget_bg_color,
+      widget_icon_color,
+      bot_header_color,
+      bot_bubble_color,
+      widget_icon_name,
+      bot_avatar_name,
+      bot_header_text_color, // Naya field
+      suggested_questions    // Naya field (Array aayega frontend se)
+    } = body;
+
     const { error } = await supabase
       .from('user_bots')
       .update({
         bot_name,
         business_details,
-        theme_color
+        theme_color,
+        widget_bg_color,
+        widget_icon_color,
+        bot_header_color,
+        bot_bubble_color,
+        widget_icon_name,
+        bot_avatar_name,
+        bot_header_text_color, // DB me save
+        suggested_questions    // DB me as JSONB save hoga automatically
       })
       .eq('email', decodeURIComponent(email));
 
