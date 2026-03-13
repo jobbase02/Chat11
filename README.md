@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🤖 chat11 - Copy-Paste AI for Modern Websites
 
-## Getting Started
+Your website needs an AI. We made it **copy-paste simple**.
 
-First, run the development server:
+**chat11** is a lightning-fast, zero-configuration AI chatbot designed for modern businesses.  
+Instead of spending weeks building a custom LLM integration, chat11 lets you **train an AI on your own data and deploy it to any website in under 2 minutes.**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# 🚀 The Value Proposition
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Train on Anything
+Upload **PDFs, plain text, FAQs, or business documentation**.  
+chat11 instantly converts your content into an intelligent knowledge base.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Zero Jargon, Full Benefit
+No **NPM packages**, no **complex API routing**, and **no infrastructure** to manage.
 
-## Learn More
+### One-Line Installation
+If you can add **Google Analytics**, you can add chat11.
 
-To learn more about Next.js, take a look at the following resources:
+### Brand Alignment
+Customize **theme colors, bot personality, and behavior** to match your brand identity.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Actionable Insights
+Access **real-time chat transcripts** to understand what your users are asking and improve support.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+# 🛠️ How It Works
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 1️⃣ Add Your Data
+Provide your bot with:
+- FAQs  
+- Product catalogs  
+- Knowledge base articles  
+- Business documentation  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 2️⃣ Instant Training
+Our engine processes your content and ensures the AI answers **strictly based on your information**.
+
+### 3️⃣ Deploy
+Once your bot is approved, copy your **unique script tag** and paste it before the closing `</body>` tag on your website.
+
+---
+
+# 🔌 Integration
+
+Deploying your AI assistant is as simple as adding **one line of code**:
+
+```html
+<script 
+  src="https://chat11.cdn.elevenxsolutions.com/widget.js" 
+  data-bot-id="YOUR_UNIQUE_BOT_ID" 
+  async>
+</script>
